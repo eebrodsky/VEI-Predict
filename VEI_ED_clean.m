@@ -1,10 +1,6 @@
 %% Cleaned code for Predicting VEI from Global Database 
 clear
 
-%Set master directory based on path of this file
-cd('../..');
-master_direct=pwd;
-cd('VEI_Research/Primary_Script');
 
 %%%%%% Download Data %%%%%%%%
 
@@ -230,7 +226,7 @@ for iVEI=0:3
     end 
 end
 % save intermediate results
-filename=strcat(master_direct,'/VEI_Research/VolcanoDatabase/ResultTable');
+filename='Result';
 save(filename,'Result');
 
 %%
@@ -266,10 +262,9 @@ for i=1:NResult % looping linearly through the
     end
 end
 % save intermediate results
-%filename=strcat(master_direct,'/VEI_Research/VolcanoDatabase/ResultTable');
 filename='Result';
 save(filename,'Result');
-%%
+
 %% Creating Tables of Attributes 
 
 % VEI Thresholds 
